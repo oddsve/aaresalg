@@ -1,5 +1,5 @@
 <body onLoad="document.myForm.newNumber.focus()">
-
+ 
 <?php 
 	if ($_POST['newGame']) {
 		array($alleTall);	
