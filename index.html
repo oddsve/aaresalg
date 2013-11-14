@@ -8,12 +8,35 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"></script>
         <script src="app/controllers.js"></script>
     </head>
-    <body>
-        <div ng-controller="SettingsController">
-            <dl>
-                <dt ng-repeat-start="setting in settings">Bok</dt>
-                <dd ng-repeat-end>{{setting.size}}</dd>
-            </dl>
+    <body ng-controller="SettingsController">
+
+        <img ng-click="visSettings()" class="vis-settings" src="app/img/settings.jpeg">
+
+        <div class="settings {{skalSettingVises}}">
+            <ul>
+                <li ng-repeat="setting in settings">
+                    <input ng-model="setting.name" type="text" value="{{setting.name}}">
+                    <input ng-model="setting.size" type="text" value="{{setting.size}}">
+                    <button ng-click="removeBok($index)">Slett bok</button>
+                </li>
+
+            </ul>
+            <button ng-click="addBok()" >Ny bok</button>
+            <button ng-click="lukkSettings()" >OK</button>
+        </div>
+        <div class="trekningsfelt">
+            <button class="restart" ng-click="restart()" >Start trekning på nytt</button>
+            <div class="en-trekning siste-trekning">
+                {{trekning.bok}} - {{trekning.nummer}}
+            </div>
+            <div class="trekk">
+                <button  ng-click="trekk()" >Trekk</button>
+            </div>
+            <ul>
+                <li class="en-trekning" ng-repeat="trekning in trekningsliste">
+                    {{trekning.bok}} - {{trekning.nummer}}
+                </li>
+            </ul>
         </div>
     </body>
 </html>

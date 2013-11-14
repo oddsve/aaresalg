@@ -1,0 +1,63 @@
+ul {
+    list-style-type: none;
+}
+
+.en-trekning {
+    color: wheat;
+    background-color: navy;
+    float: left;
+    margin: 5px 10px 0 0;
+    padding: 3px;
+    border-radius: 15px;
+}
+
+div.siste-trekning {
+    float: none;
+    text-align: center;
+    font-size: 16em;
+    clear: both;
+    border-radius: 4em;
+
+}
+
+.trekk button {
+    font-size: 2em;
+    border-radius: 1em;
+
+}
+
+.trekk {
+    text-align: center;
+}
+
+.settings {
+    position: absolute;
+    border: solid navy 2px;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    z-index: 100;
+    background-color: wheat;
+
+}
+
+.restart {
+    float: right;
+}
+
+.vis-settings {
+    position: absolute;
+    width: 130px;
+    left: 60%;
+    top: -20px;
+    z-index: -1;
+
+}
+
+.trekningsfelt {
+    margin-top: 35px;
+}
+
+.hidden {
+    display: none;
+}
